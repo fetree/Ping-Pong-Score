@@ -16,7 +16,7 @@ class TappableScoreView: UIView {
         
         self.backgroundColor = color
         
-        scoreLabel.font = scoreLabel.font.withSize(30)
+        scoreLabel.font = scoreLabel.font.withSize(40)
         scoreLabel.text = "0"
         addSubview(scoreLabel)
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
