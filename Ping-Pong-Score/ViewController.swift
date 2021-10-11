@@ -47,9 +47,13 @@ class ViewController: UIViewController {
         resetButton.rightAnchor.constraint(equalTo: rightScoreView.rightAnchor, constant: -20).isActive = true
         resetButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         resetButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        
+        resetButton.addTarget(self, action: #selector(self.resetScore), for: .touchUpInside)
     }
 
+    @objc func resetScore() {
+        leftScoreView.scoreLabel.text = String(0)
+        rightScoreView.scoreLabel.text = String(0)
+    }
 
 }
 
