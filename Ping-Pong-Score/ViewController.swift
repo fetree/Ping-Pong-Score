@@ -11,6 +11,14 @@ class ViewController: UIViewController {
     
     let leftScoreView = TappableScoreView(color: .red)
     let rightScoreView = TappableScoreView(color: .green)
+    
+    var resetButton: UIButton = {
+        var button = UIButton()
+        button.setTitle("Reset", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +40,13 @@ class ViewController: UIViewController {
         rightScoreView.leadingAnchor.constraint(equalTo: leftScoreView.trailingAnchor).isActive = true
         rightScoreView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         rightScoreView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        
+        view.addSubview(resetButton)
+        resetButton.translatesAutoresizingMaskIntoConstraints = false
+        resetButton.topAnchor.constraint(equalTo: rightScoreView.topAnchor, constant: 30).isActive = true
+        resetButton.rightAnchor.constraint(equalTo: rightScoreView.rightAnchor, constant: -20).isActive = true
+        resetButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        resetButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         
     }
 
