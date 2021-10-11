@@ -35,7 +35,6 @@ class TappableScoreView: UIView {
         print(val)
         
         scoreLabel.text = String(val)
-        // increase score
     }
     
     required init?(coder: NSCoder) {
