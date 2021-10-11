@@ -10,12 +10,11 @@
 		01AC87862714048200F51578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87852714048200F51578 /* AppDelegate.swift */; };
 		01AC87882714048200F51578 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87872714048200F51578 /* SceneDelegate.swift */; };
 		01AC878A2714048200F51578 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87892714048200F51578 /* ViewController.swift */; };
-		01AC878D2714048200F51578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AC878B2714048200F51578 /* Main.storyboard */; };
 		01AC878F2714048500F51578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AC878E2714048500F51578 /* Assets.xcassets */; };
-		01AC87922714048500F51578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AC87902714048500F51578 /* LaunchScreen.storyboard */; };
 		01AC879D2714048500F51578 /* Ping_Pong_ScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC879C2714048500F51578 /* Ping_Pong_ScoreTests.swift */; };
 		01AC87A72714048500F51578 /* Ping_Pong_ScoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87A62714048500F51578 /* Ping_Pong_ScoreUITests.swift */; };
 		01AC87A92714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87A82714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift */; };
+		01AC87B62714065100F51578 /* TappableScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87B52714065100F51578 /* TappableScoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,15 +39,14 @@
 		01AC87852714048200F51578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01AC87872714048200F51578 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		01AC87892714048200F51578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01AC878C2714048200F51578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01AC878E2714048500F51578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		01AC87912714048500F51578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01AC87932714048500F51578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01AC87982714048500F51578 /* Ping-Pong-ScoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ping-Pong-ScoreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AC879C2714048500F51578 /* Ping_Pong_ScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ping_Pong_ScoreTests.swift; sourceTree = "<group>"; };
 		01AC87A22714048500F51578 /* Ping-Pong-ScoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ping-Pong-ScoreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AC87A62714048500F51578 /* Ping_Pong_ScoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ping_Pong_ScoreUITests.swift; sourceTree = "<group>"; };
 		01AC87A82714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ping_Pong_ScoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		01AC87B52714065100F51578 /* TappableScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableScoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +100,9 @@
 				01AC87852714048200F51578 /* AppDelegate.swift */,
 				01AC87872714048200F51578 /* SceneDelegate.swift */,
 				01AC87892714048200F51578 /* ViewController.swift */,
-				01AC878B2714048200F51578 /* Main.storyboard */,
 				01AC878E2714048500F51578 /* Assets.xcassets */,
-				01AC87902714048500F51578 /* LaunchScreen.storyboard */,
 				01AC87932714048500F51578 /* Info.plist */,
+				01AC87B52714065100F51578 /* TappableScoreView.swift */,
 			);
 			path = "Ping-Pong-Score";
 			sourceTree = "<group>";
@@ -231,9 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01AC87922714048500F51578 /* LaunchScreen.storyboard in Resources */,
 				01AC878F2714048500F51578 /* Assets.xcassets in Resources */,
-				01AC878D2714048200F51578 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +255,7 @@
 			files = (
 				01AC878A2714048200F51578 /* ViewController.swift in Sources */,
 				01AC87862714048200F51578 /* AppDelegate.swift in Sources */,
+				01AC87B62714065100F51578 /* TappableScoreView.swift in Sources */,
 				01AC87882714048200F51578 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,25 +291,6 @@
 			targetProxy = 01AC87A32714048500F51578 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		01AC878B2714048200F51578 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01AC878C2714048200F51578 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		01AC87902714048500F51578 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01AC87912714048500F51578 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		01AC87AA2714048500F51578 /* Debug */ = {
@@ -444,7 +421,6 @@
 				INFOPLIST_FILE = "Ping-Pong-Score/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +448,6 @@
 				INFOPLIST_FILE = "Ping-Pong-Score/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
