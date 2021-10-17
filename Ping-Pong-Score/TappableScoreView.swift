@@ -10,6 +10,8 @@ import UIKit
 class TappableScoreView: UIView {
     
     var scoreLabel = UILabel()
+    var servingLabel = UILabel()
+    var isServing = false
     
     init(frame: CGRect = .zero, color: UIColor) {
         super.init(frame: frame)
@@ -23,9 +25,20 @@ class TappableScoreView: UIView {
         scoreLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         scoreLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
+        addSubview(servingLabel)
+        servingLabel.text = "Serving"
+        servingLabel.isHidden = true
+        servingLabel.translatesAutoresizingMaskIntoConstraints = false
+        servingLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor).isActive = true
+        servingLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
         // Make tappable
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.increaseScore))
         self.addGestureRecognizer(gesture)
+    }
+    
+    public func showServing() {
+        servingLabel.isHidden = true
     }
     
     @objc func increaseScore(_ sender: UITapGestureRecognizer){
