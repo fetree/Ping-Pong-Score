@@ -15,6 +15,7 @@
 		01AC87A72714048500F51578 /* Ping_Pong_ScoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87A62714048500F51578 /* Ping_Pong_ScoreUITests.swift */; };
 		01AC87A92714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87A82714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift */; };
 		01AC87B62714065100F51578 /* TappableScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87B52714065100F51578 /* TappableScoreView.swift */; };
+		01E86122271BE75800602703 /* TappableScoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E86121271BE75800602703 /* TappableScoreProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		01AC87A62714048500F51578 /* Ping_Pong_ScoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ping_Pong_ScoreUITests.swift; sourceTree = "<group>"; };
 		01AC87A82714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ping_Pong_ScoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		01AC87B52714065100F51578 /* TappableScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableScoreView.swift; sourceTree = "<group>"; };
+		01E86121271BE75800602703 /* TappableScoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableScoreProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +102,10 @@
 				01AC87852714048200F51578 /* AppDelegate.swift */,
 				01AC87872714048200F51578 /* SceneDelegate.swift */,
 				01AC87892714048200F51578 /* ViewController.swift */,
+				01AC87B52714065100F51578 /* TappableScoreView.swift */,
 				01AC878E2714048500F51578 /* Assets.xcassets */,
 				01AC87932714048500F51578 /* Info.plist */,
-				01AC87B52714065100F51578 /* TappableScoreView.swift */,
+				01E86121271BE75800602703 /* TappableScoreProtocol.swift */,
 			);
 			path = "Ping-Pong-Score";
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01AC878A2714048200F51578 /* ViewController.swift in Sources */,
+				01E86122271BE75800602703 /* TappableScoreProtocol.swift in Sources */,
 				01AC87862714048200F51578 /* AppDelegate.swift in Sources */,
 				01AC87B62714065100F51578 /* TappableScoreView.swift in Sources */,
 				01AC87882714048200F51578 /* SceneDelegate.swift in Sources */,
