@@ -16,9 +16,6 @@
 		01AC87A92714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87A82714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift */; };
 		01AC87B62714065100F51578 /* TappableScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC87B52714065100F51578 /* TappableScoreView.swift */; };
 		01E86122271BE75800602703 /* TappableScoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E86121271BE75800602703 /* TappableScoreProtocol.swift */; };
-		9E47CB992785750600679C82 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E47CB982785750600679C82 /* Game.swift */; };
-		9E47CB9B2785775700679C82 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E47CB9A2785775700679C82 /* Player.swift */; };
-		9E47CB9F27858A4F00679C82 /* Game+PingPong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E47CB9E27858A4F00679C82 /* Game+PingPong.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +49,6 @@
 		01AC87A82714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ping_Pong_ScoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		01AC87B52714065100F51578 /* TappableScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableScoreView.swift; sourceTree = "<group>"; };
 		01E86121271BE75800602703 /* TappableScoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableScoreProtocol.swift; sourceTree = "<group>"; };
-		9E47CB982785750600679C82 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		9E47CB9A2785775700679C82 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		9E47CB9E27858A4F00679C82 /* Game+PingPong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+PingPong.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +99,10 @@
 		01AC87842714048200F51578 /* Ping-Pong-Score */ = {
 			isa = PBXGroup;
 			children = (
-				9E47CB962785749F00679C82 /* Features */,
-				9E47CB952785749A00679C82 /* Models */,
 				01AC87852714048200F51578 /* AppDelegate.swift */,
 				01AC87872714048200F51578 /* SceneDelegate.swift */,
+				01AC87892714048200F51578 /* ViewController.swift */,
+				01AC87B52714065100F51578 /* TappableScoreView.swift */,
 				01AC878E2714048500F51578 /* Assets.xcassets */,
 				01AC87932714048500F51578 /* Info.plist */,
 				01E86121271BE75800602703 /* TappableScoreProtocol.swift */,
@@ -131,41 +125,6 @@
 				01AC87A82714048500F51578 /* Ping_Pong_ScoreUITestsLaunchTests.swift */,
 			);
 			path = "Ping-Pong-ScoreUITests";
-			sourceTree = "<group>";
-		};
-		9E47CB952785749A00679C82 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				9E47CB9D27858A3A00679C82 /* Games */,
-				9E47CB9A2785775700679C82 /* Player.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		9E47CB962785749F00679C82 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				9E47CB97278574C000679C82 /* New Group */,
-				01AC87892714048200F51578 /* ViewController.swift */,
-				01AC87B52714065100F51578 /* TappableScoreView.swift */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		9E47CB97278574C000679C82 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		9E47CB9D27858A3A00679C82 /* Games */ = {
-			isa = PBXGroup;
-			children = (
-				9E47CB982785750600679C82 /* Game.swift */,
-				9E47CB9E27858A4F00679C82 /* Game+PingPong.swift */,
-			);
-			path = Games;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,11 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01AC878A2714048200F51578 /* ViewController.swift in Sources */,
-				9E47CB992785750600679C82 /* Game.swift in Sources */,
 				01E86122271BE75800602703 /* TappableScoreProtocol.swift in Sources */,
 				01AC87862714048200F51578 /* AppDelegate.swift in Sources */,
-				9E47CB9B2785775700679C82 /* Player.swift in Sources */,
-				9E47CB9F27858A4F00679C82 /* Game+PingPong.swift in Sources */,
 				01AC87B62714065100F51578 /* TappableScoreView.swift in Sources */,
 				01AC87882714048200F51578 /* SceneDelegate.swift in Sources */,
 			);
@@ -464,7 +420,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N257XFBJ9Y;
+				DEVELOPMENT_TEAM = AFT49TZ2SR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ping-Pong-Score/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -491,7 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N257XFBJ9Y;
+				DEVELOPMENT_TEAM = AFT49TZ2SR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ping-Pong-Score/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
