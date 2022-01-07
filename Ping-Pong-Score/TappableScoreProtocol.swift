@@ -8,5 +8,5 @@
 import Foundation
 
 protocol Scoreboard {
-    static var totalScore: Int {get set}
+    var totalScore: Int { get set }
 }

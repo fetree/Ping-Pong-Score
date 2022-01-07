@@ -9,13 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let leftScoreView = TappableScoreView(color: .red)
-    let rightScoreView = TappableScoreView(color: .green)
+    var game = PingPong(startingPlayers: [
+        .init(playerColor: .orange),
+        .init(playerColor: .systemMint)
+    ])
+    
+    lazy var leftScoreView = TappableScoreView(
+        player: game.players.first!,
+        increment: game.increments.first!,
+        onPress: leftPressed
+    )
+    
+    lazy var rightScoreView = TappableScoreView(
+        player: game.players.last!,
+        increment: game.increments.first!,
+        onPress: rightPressed
+    )
     
     var resetButton: UIButton = {
         var button = UIButton()
         button.setTitle("Reset", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.shadowColor = UIColor.black.withAlphaComponent(0.3).cgColor
+        button.layer.shadowOffset = .init(width: 0, height: 2)
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 1
         
         return button
     }()
@@ -23,7 +41,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        game.gameDelegate = self
         setUpScoreViews()
+        setupWithGame()
     }
     
     private func setUpScoreViews() {
@@ -54,24 +74,40 @@ class ViewController: UIViewController {
     }
 
     @objc func resetScore() {
-        leftScoreView.scoreLabel.text = String(0)
-        rightScoreView.scoreLabel.text = String(0)
-        TappableScoreView.totalScore = 0
-        
-        leftScoreView.servingLabel.isHidden = false
-        
-        rightScoreView.servingLabel.isHidden = true
+        game.reset()
+        setupWithGame()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if TappableScoreView.totalScore % 5 == 0 && TappableScoreView.totalScore != 0{
-            let leftBool = leftScoreView.servingLabel.isHidden
-            leftScoreView.servingLabel.isHidden = !leftBool
-            
-            let rightBool = rightScoreView.servingLabel.isHidden
-            rightScoreView.servingLabel.isHidden = !rightBool
-        }
+    func setupWithGame() {
+        game.startNewRound()
+        leftScoreView.totalScore = 0
+        rightScoreView.totalScore = 0
+        
+        let leftIsFirst = game.currentPlayer == leftScoreView.player
+        leftScoreView.servingLabel.isHidden = !leftIsFirst
+        rightScoreView.servingLabel.isHidden = leftIsFirst
+    }
+    
+    func leftPressed() {
+        leftScoreView.increment(game.increment)
+        game.incrementTurn()
+    }
+    
+    func rightPressed() {
+        rightScoreView.increment(game.increment)
+        game.incrementTurn()
     }
 
 }
 
+extension ViewController: GameDelegate {
+    func gameCurrentPlayerChanged(to player: Player) {
+        let firstIsServing = player == game.players.first!
+        leftScoreView.servingLabel.isHidden = !firstIsServing
+        rightScoreView.servingLabel.isHidden = firstIsServing
+    }
+    
+    func gameRoundEnded(exitConditions: [ExitCondition]) {
+        game.swapPlayers()
+    }
+}
